@@ -226,17 +226,17 @@ void MainWindow::on_pushButton_2_clicked() {
 
     make_progress_visible();
     this->repaint();
-    auto handle = AsyncExecute(session);
+//    auto handle = AsyncExecute(session);
 
-    // This block can be removed
-    while (!(handle.wait_for(std::chrono::seconds(0)) ==
-             std::future_status::ready)) {
-      make_progress_visible();
-      make_result_invisible();
-      make_step_one_invisible();
-    }
+//    // This block can be removed
+//    while (!(handle.wait_for(std::chrono::seconds(0)) ==
+//             std::future_status::ready)) {
+//      make_progress_visible();
+//      make_result_invisible();
+//      make_step_one_invisible();
+//    }
 
-    auto result = handle.get();
+    auto result = session.execute();
     make_progress_invisible();
     make_step_one_invisible();
     setUpResults(result);
@@ -329,10 +329,4 @@ void MainWindow::reset() {
   ui->lineEdit_2->clear();
   ui->lineEdit_3->clear();
   ui->checkBox->setCheckState(Qt::CheckState::Unchecked);
-}
-
-std::future<testcaser::integrator::Result>
-MainWindow::AsyncExecute(testcaser::integrator::VirtualJudge &session) {
-  return std::async(std::launch::async,
-                    [&session]() { return session.execute(); });
 }

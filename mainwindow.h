@@ -1,6 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+// This macro flags the testcaser that this build is intended for QT GUI.
+// It must be set if you ever wish to compile it on Windows
+
+#define QT_JUDGE
 #include "testcaser/integrator"
 #include <QMainWindow>
 #include <future>
@@ -48,9 +52,6 @@ private:
   void make_progress_visible();
   void make_progress_invisible();
   void setUpResults(testcaser::integrator::Result);
-  std::future<testcaser::integrator::Result>
-  AsyncExecute(testcaser::integrator::VirtualJudge &session);
-
   void reset();
 };
 
