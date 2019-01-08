@@ -7,12 +7,14 @@ This is a GUI implementation of the `testcaser/virtualjudge` command line interf
 ## Demo
 
 ![](https://i.imgur.com/uYC9vZ3.png)
+![](https://i.imgur.com/po7cile.png)
 
-<center> **Input Page for the GUI** </center>
+**Input Page for the GUI for Linux and Windows**
 
 ![](https://i.imgur.com/2SWIIQF.png)
+![](https://i.imgur.com/XDBsJHE.png)
 
-<center> **Result Page for the GUI** </center>
+**Result Page for the GUI for Linux and Windows**
 
 ## Installation
 
@@ -26,32 +28,6 @@ The release version of VirtualJudge depends upon the following Qt Dynamic Librar
 - libicui18n.so.56
 - libicuuc.so.56
 - libicudata.so.56
-
-Apart from these libraries it also depends upon following shared librariess of linux.
-
-- linux-vdso.so.1
-- libgtk3-nocsd.so.0
-- libpthread.so.0
-- libstdc++.so.6
-- libgcc_s.so.1
-- libc.so.6 
-- ld-linux-x86-64.so.2
-- libdl.so.2
-- libGL.so.1
-- libm.so.6
-- libz.so.1
-- libgthread-2.0.so.0
-- libglib-2.0.so.0
-- libGLX.so.0
-- libGLdispatch.so.0
-- libpcre.so.3
-- libX11.so.6
-- libxcb.so.1
-- libXau.so.6
-- libXdmcp.so.6
-- libbsd.so.0
-- librt.so.1
-
 
 
 We Provide all the Qt shared libraries along with the executable in the `libs/` directory. In order for dynamic linker to correctly link all the shared libraries you need to tell the linker where to look for the libs. By default the dynamic linker does not looks in the current working directory.
@@ -69,8 +45,16 @@ We have provided all major Qt shared libraries in the `libs/`
 
 ### Windows
 
-*Coming Soon*
+In order to install VirtualJudge GUI to windows you need to run the setup named `virtualjudge-setup.exe`. You can download the setup and run it, It will install all the required dlls in its place. For Uninstalling you can run the `uninstall.exe` which you can find in your installation directory (mostly `C:\Program Files (x86)\VirtualJudge\uninstall.exe`).
 
+For Curious readers, This Executable and following special shared library dependency
+- `QtCore5.dll`
+- `Qt5Gui.dll`
+- `Qt5Widgets.dll`
+
+I have added all those in the directory `win_dll/`
+
+**It does not have any ICON, We wish to add one very soon**
 
 
 ### MacOSX
