@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-#win32:RC_ICONS += ./VirtualJudge.png
+win32:RC_ICONS += vj.ico
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
