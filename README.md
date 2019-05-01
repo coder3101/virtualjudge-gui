@@ -20,7 +20,7 @@ This is a GUI implementation of the `testcaser/virtualjudge` command line interf
 
 ### Linux 
 
-The Application is available as an **AppImage**. In order to run it simply get the latest app image from here and make it executable and run it. Create a Desktop file for Desktop Integration with content as follows.
+The Application is available as an **AppImage**. In order to run it simply get the latest app image from [here](https://github.com/coder3101/virtualjudge-gui/releases) and make it executable and run it. Create a Desktop file for Desktop Integration with content as follows.
 
 ### Windows
 
