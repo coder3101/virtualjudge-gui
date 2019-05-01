@@ -20,28 +20,7 @@ This is a GUI implementation of the `testcaser/virtualjudge` command line interf
 
 ### Linux 
 
-The release version of VirtualJudge depends upon the following Qt Dynamic Libraries
-
-- libQt5Widgets.so.5
-- libQt5Gui.so.5
-- libQt5Core.so.5
-- libicui18n.so.56
-- libicuuc.so.56
-- libicudata.so.56
-
-
-We Provide all the Qt shared libraries along with the executable in the `libs/` directory. In order for dynamic linker to correctly link all the shared libraries you need to tell the linker where to look for the libs. By default the dynamic linker does not looks in the current working directory.
-
-Here are two possible ways to install, While one requires super user privileges other does not, use the one that is best suited for you.
-
--  You can install the Qt libraries in one of the system library paths (e.g. `/usr/lib` on most systems). You can simpley copy-paste the libs to this directory. (Needs to be super-user)
-- You can write a startup script for your application, where you modify the dynamic linker configuration (e.g., adding your Qt lib's directory to the `LD_LIBRARY_PATH` environment variable)
-
-Once libraries are set up and ready you can simply run this `VirtualJudge` executable.
-
-We have provided all major Qt shared libraries in the `libs/`
-
-**Alternatively you can double click on `run.sh` and it should start the GUI**.
+The Application is available as an **AppImage**. In order to run it simply get the latest app image from here and make it executable and run it. Create a Desktop file for Desktop Integration with content as follows.
 
 ### Windows
 
